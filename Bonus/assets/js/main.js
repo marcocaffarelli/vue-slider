@@ -1,5 +1,14 @@
 // Istruzioni:
 // Ricreare lo slider di immagini ma questa volta con Vue
+// Bonus ufficiale:
+// Facciamo in modo che il nostro slider scorra automaticamente in avanti,
+// e ogni 3 secondi visualizzi un immagine differente.
+// Tip: possiamo usare una lifecycle Hook per inserire un nostro script quando l'istanza Vue é stata caricata.
+// Possibili extra Bonus:
+// cliccando sui pallini visualizzeremo l'immagine corrispondente
+// cliccando sulle frecce della tastiera sinista e destra scorriamo tra le immagini
+// I bonus metteteli in una cartella "bonus".
+
 let app = new Vue({
     el: "#app", 
     data: {
@@ -24,8 +33,7 @@ let app = new Vue({
         //cliccando sull'i figlia di prev
         indietro(){
            //cliccando sull' i diminuisco il valore dell'index e quindi cambio immagine 
-           (this.contatore == 0) ? this.contatore = this.immagini.length -1 : this.contatore--
+           (this.contatore == 0) ? this.contatore = this.immagini.length - 1: this.contatore--
         }
     }
 });
-

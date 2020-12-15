@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue-slider Bonus</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+
+        <div id="app">
+            <div class="container">
+                <div class="slider-wrapper">
+                    <div class="prev" @click = "indietro">
+                        <i class="fas fa-angle-left"></i>
+                    </div>
+                    <div class="images">
+                        <img class="active" :src="immagini[contatore]">    
+                    </div>
+                    <div class="next" @click = "avanti">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                    <div class="nav">
+                        <i class="fas fa-circle" :class="(index == contatore) ? 'active' : null" v-for="(immagine, index) in immagini"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>
