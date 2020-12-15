@@ -24,8 +24,9 @@ let app = new Vue({
         
     },  
     //creata una funzione per far scorrere in avanti lo slider ogni 3 secondi
-    created: function(){
-        setInterval(this.avanti, 3000)
+     created: function(){
+         setInterval(this.avanti, 3000)
+    
     },
 
     methods: {
@@ -38,6 +39,7 @@ let app = new Vue({
         indietro(){
            //cliccando sull' i diminuisco il valore dell'index e quindi cambio immagine 
            (this.contatore == 0) ? this.contatore = this.immagini.length - 1: this.contatore--
-        }
+        },
+      
     }
 });

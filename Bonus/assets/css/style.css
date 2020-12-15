@@ -35,6 +35,7 @@
     transform: translateY(-50%);
     font-size: 40px;
     cursor: pointer;
+    z-index: 2;
 }
 .next {
     left: auto;
@@ -55,4 +56,12 @@
 }
 .nav > i.active {
     color: blue;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    z-index: 1;
+    opacity: 0;
 }
