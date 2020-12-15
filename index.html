@@ -16,16 +16,13 @@
                         <i class="fas fa-angle-left"></i>
                     </div>
                     <div class="images">
-                        <img class="active" :src="immagini[index]">    
+                        <img class="active" :src="immagini[contatore]">    
                     </div>
                     <div class="next" @click = "avanti">
                         <i class="fas fa-angle-right"></i>
                     </div>
                     <div class="nav">
-                        <i class="fas fa-circle" :class="pallini[3]"></i>
-                        <i class="fas fa-circle" :class="pallini[2]"></i>
-                        <i class="fas fa-circle" :class="pallini[1]"></i>
-                        <i class="fas fa-circle" :class="pallini[0]"></i>
+                        <i class="fas fa-circle" :class="(index == contatore) ? 'active' : null" v-for="(immagine, index) in immagini"></i>
                     </div>
                 </div>
             </div>

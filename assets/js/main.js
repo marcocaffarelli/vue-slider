@@ -19,27 +19,21 @@ let app = new Vue({
             "https://cdn.mos.cms.futurecdn.net/FUE7XiFApEqWZQ85wYcAfM.jpg",
             "https://static.photocdn.pt/images/articles/2017/04/28/iStock-546424192.jpg"
         ],
-        //creato un index che rappresenta l'indice dell'array
-        index: 0,
-
-        pallini: [
-            "",
-            "",
-            "",
-            "active",
-        ],
+        //creato un contatore che rappresenta l'indice dell'array
+        contatore: 0,
+        
     },  
 
     methods: {
         //cliccando sull'i figlia di next
         avanti(){
-           //cliccando sull' i aumento il valore dell'indice e quindi cambio immagine 
-           (this.index == 3) ? this.index = 0 : this.index++
+           //cliccando sull' i aumento il valore dell'index e quindi cambio immagine 
+           (this.contatore == 3) ? this.contatore = 0 : this.contatore++
         },
         //cliccando sull'i figlia di prev
         indietro(){
-           //cliccando sull' i diminuisco il valore dell'indice e quindi cambio immagine 
-           (this.index == 0) ? this.index = 3 : this.index--
+           //cliccando sull' i diminuisco il valore dell'index e quindi cambio immagine 
+           (this.contatore == 0) ? this.contatore = 3 : this.contatore--
         }
     }
 });
