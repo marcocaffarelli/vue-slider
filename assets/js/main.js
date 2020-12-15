@@ -21,6 +21,13 @@ let app = new Vue({
         ],
         //creato un index che rappresenta l'indice dell'array
         index: 0,
+
+        pallini: [
+            "",
+            "",
+            "",
+            "active",
+        ],
     },  
 
     methods: {
