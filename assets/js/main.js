@@ -27,13 +27,12 @@ let app = new Vue({
         //cliccando sull'i figlia di next
         avanti(){
            //cliccando sull' i aumento il valore dell'indice e quindi cambio immagine 
-           this.index++
-          
+           (this.index == 3) ? this.index = 0 : this.index++
         },
         //cliccando sull'i figlia di prev
         indietro(){
            //cliccando sull' i diminuisco il valore dell'indice e quindi cambio immagine 
-            this.index--
+           (this.index == 0) ? this.index = 3 : this.index--
         }
     }
 });
