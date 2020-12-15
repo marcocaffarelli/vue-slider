@@ -23,6 +23,10 @@ let app = new Vue({
         contatore: 0,
         
     },  
+    //creata una funzione per far scorrere in avanti lo slider ogni 3 secondi
+    created: function(){
+        setInterval(this.avanti, 3000)
+    },
 
     methods: {
         //cliccando sull'i figlia di next
